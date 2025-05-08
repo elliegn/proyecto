@@ -186,31 +186,30 @@ h2 {
 }
 
 /* Estilos del encabezado */
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
 
-    header {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 10px 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
-    header nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
+header nav a {
+  font-size: 1.2rem;
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
-    header nav a {
-      font-size: 1.2rem;
-      color: #ffd700;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    header nav a:hover {
-      color: #ffffff;
-    }
+header nav a:hover {
+  color: #ffffff;
+}
