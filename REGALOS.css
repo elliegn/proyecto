@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -8,8 +7,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     font-size: 2em;
-}
-    
 }
 
 .container {
@@ -24,10 +21,11 @@ body {
     width: 80%;
     max-width: 600px;
     padding: 20px;
-    border: 3.5px solid #d5d83d;
+    border: 3.5px solid rgba(128, 128, 128, 0.8); /* Borde gris semitransparente */
     border-radius: 20px;
     text-align: center;
-    background-color: rgb(140, 138, 143);
+    background-color: rgba(128, 128, 128, 0.3); /* Fondo gris claro semitransparente */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Sombra negra para llamar atención */
 }
 
 .block img, .block video {
@@ -44,32 +42,32 @@ body {
     margin-top: 20px;
 }
 
-   header {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 10px 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
 
-    header nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-    header nav a {
-      font-size: 1.2rem;
-      color: #ffd700;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
+header nav a {
+    font-size: 1.2rem;
+    color: #ffd700; /* Amarillo */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
 
-    header nav a:hover {
-      color: #ffffff;
-    }
+header nav a:hover {
+    color: #ffffff; /* Blanco */
+}
 
 
