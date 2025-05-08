@@ -76,7 +76,7 @@ h2 {
   padding: 20px;
   border-radius: 20px;
   text-align: center;
-  background-color: rgba(159, 203, 221, 0.8); /* Azul claro semitransparente */
+      background-color: #6e6e6e;
   margin: auto;
   display: block;
   border: 2px solid #ffd700; /* Borde amarillo dorado */
