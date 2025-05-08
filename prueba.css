@@ -1,0 +1,348 @@
+
+
+  
+  body {
+    background-image: url('fondo3.png');
+    background-color: rgb(236, 236, 236);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    font-family: 'Lucida Sans', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding-top: 100px; /* Espacio para el encabezado fijo */
+    color: #ffffff;
+  }
+  /* Contenedor principal */
+  .container {
+    position: relative;
+    padding: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* Encabezados */
+  h1 {
+    color: #8B0000;
+    font-size: 48px;
+    margin: 20px 0;
+    font-weight: bold;
+  }
+  p {
+    color: #8B0000;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  /* Título secundario */
+  h2 {
+    color: #8B0000;
+    font-size: 36px;
+    margin: 30px 0 10px;
+  }
+  /* Campo de entrada */
+  .input-number {
+    width: 80%;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    font-size: 18px;
+    color: #333;
+    transition: border-color 0.3s;
+  }
+  .input-number:focus {
+    border-color: #3df321;
+    outline: none;
+  }
+  /* Boton calcular */
+  .boton-calcular {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #729c72;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+  }
+  .boton-calcular:hover {
+    background-color: #5a7a5a;
+  }
+  /* Resultado */
+  .resultado {
+    color: #12bc45;
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  /* seccion de comentarios */
+  .comentarios {
+    margin-top: 40px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  .com {
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    text-align: left;
+  }
+  .com p {
+    font-size: 18px;
+  }
+  .com p strong {
+    color: #000000;
+  }
+ /* Contenedor de navegación */
+.navegacion {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+/* Estilos generales para los botones */
+.boton-izquierda, .boton-derecha {
+  position: fixed;
+  bottom: 20px;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 23px;
+  border-radius: 20px; /* Redondea los botones */
+  border: none;
+  color: white; /* Texto en blanco para mejor visibilidad */
+}
+/* Botón izquierdo - rojo */
+.boton-izquierda {
+  left: 10px;
+  background-color: #f20000;
+}
+.boton-izquierda:hover {
+  background-color: #d40000;
+}
+/* Botón derecho - verde */
+.boton-derecha {
+  right: 10px;
+  background-color: #3df321;
+}
+.boton-derecha:hover {
+  background-color: #2c9c1a;
+}
+  /* Establecemos el body y html con altura y posición relativa */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+/* Posicionamos las imágenes en las esquinas */
+.img-pinguino {
+  position: absolute;
+  top: 200px;
+  left: -120px;
+  width: 250px;
+}
+.img-regalo1 {
+  position: absolute;
+  bottom: -400px;
+  right: 1100px;
+  width: 250px;
+}
+.img-regalo2 {
+  position: absolute;
+  top: 350px;
+  right:-300px;
+  width: 290px;
+}
+.img-santa {
+  position: absolute;
+  bottom: -500px;
+  right: -150px;
+  width: 250px;
+}
+
+body {
+  background-image: url('fondo3.png');
+  background-color: rgb(236, 236, 236);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  font-family: 'Lucida Sans', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding-top: 100px; /* Espacio para el encabezado fijo */
+  color: #ffffff;
+}
+
+/* Contenedor principal */
+.container {
+  position: relative;
+  padding: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Encabezados */
+h1 {
+  color: #8B0000;
+  font-size: 48px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+p {
+  color: #8B0000;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+/* Título secundario */
+h2 {
+  color: #8B0000;
+  font-size: 36px;
+  margin: 30px 0 10px;
+}
+
+/* Estilos del encabezado */
+header {
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
+  color: #333;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #0d9b2c; /* Cambio de color al pasar el cursor */
+}
+
+/* Campo de entrada */
+.input-number {
+  width: 80%;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  font-size: 18px;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.input-number:focus {
+  border-color: #3df321;
+  outline: none;
+}
+
+/* Botón calcular */
+.boton-calcular {
+  margin-top: 20px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: #729c72;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+.boton-calcular:hover {
+  background-color: #5a7a5a;
+}
+
+/* Resultado */
+.resultado {
+  color: #12bc45;
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Sección de comentarios */
+.comentarios {
+  margin-top: 40px;
+  padding: 20px;
+  max-width: 800px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.com {
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #CCC;
+  text-align: left;
+}
+
+.com p {
+  font-size: 18px;
+}
+
+.com p strong {
+  color: #000000;
+}
+
+/* Contenedor de navegación */
+.navegacion {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+/* Estilos de los botones de navegación */
+.boton-izquierda, .boton-derecha {
+  position: fixed;
+  bottom: 20px;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 23px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+}
+
+.boton-izquierda {
+  left: 10px;
+  background-color: #f20000;
+}
+
+.boton-izquierda:hover {
+  background-color: #d40000;
+}
+
+.boton-derecha {
+  right: 10px;
+  background-color: #3df321;
+}
+
+.boton-derecha:hover {
+  background-color: #2c9c1a;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECIBO😝</title>
+    <link rel="stylesheet" href="tikey.css"> 
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #9b9b9b;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .recibo {
+            background: rgb(212, 212, 212);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            width: 400px;
+            text-align: left;
+            color: black;
+            font-size: 18px;
+        }
+        .recibo h2 {
+            text-align: center;
+        }
+        .dato {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+    </style>
+      
+</head>
+<body>
+  
+    <div class="recibo">
+        <h2>Recibo de Datos</h2>
+        <p class="dato"><strong>Nombre:</strong> <span id="recibo-nombre"></span></p>
+        <p class="dato"><strong>Edad:</strong> <span id="recibo-edad"></span></p>
+        <p class="dato"><strong>Puesto:</strong> <span id="recibo-puesto"></span></p>
+        <p class="dato"><strong>Tipo de Sangre:</strong> <span id="recibo-sangre"></span></p>
+        <p class="dato"><strong>CURP:</strong> <span id="recibo-curp"></span></p>
+        <p class="dato"><strong>Código Postal:</strong> <span id="recibo-postal"></span></p>
+        <hr>
+        <p class="dato"><strong>Fecha de emisión:</strong> <span id="fecha"></span> - <span id="hora"></span></p>
+        <p class="dato"><strong>Este documento certifica que los datos han sido registrados correctamente.</strong></p>
+    </div>
+
+    <button onclick="window.location.href='empresa.html'">Volver a<br> página principal</button>
+
+    <script>
+        function obtenerDatos() {
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById("recibo-nombre").textContent = params.get("nombre") || "No ingresado";
+            document.getElementById("recibo-edad").textContent = params.get("edad") || "No ingresado";
+            document.getElementById("recibo-puesto").textContent = params.get("puesto") || "No ingresado";
+            document.getElementById("recibo-sangre").textContent = params.get("sangre") || "No ingresado";
+            document.getElementById("recibo-curp").textContent = params.get("curp") || "No ingresado";
+            document.getElementById("recibo-postal").textContent = params.get("postal") || "No ingresado";
+
+            // Obtener fecha y hora desde la URL
+            document.getElementById("fecha").textContent = params.get("fecha") || "Fecha no registrada";
+            document.getElementById("hora").textContent = params.get("hora") || "Hora no registrada";
+        }
+
+        obtenerDatos();
+    </script>
+</body>
+</html>

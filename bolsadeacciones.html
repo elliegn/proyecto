@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PNZ - Inversión Inteligente</title>
+  <link rel="stylesheet" href="bolsa.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🚀 ¡PZN ya ha hecho millonarios! 💸</h1>
+    <p>💹 Valor actual: <strong>$346,968 USD</strong></p>
+
+    <div class="chart-container">
+      <canvas id="stockChart"></canvas>
+    </div>
+
+    <button class="buton" onclick="window.location.href='Empresa.html'">🌐 Página Principal</button>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('stockChart').getContext('2d');
+    const data = {
+      labels: Array.from({ length: 20 }, (_, i) => `T${i + 1}`),
+      datasets: [{
+        label: 'Valor PZN',
+        data: Array.from({ length: 20 }, () => 340000 + Math.random() * 10000),
+        borderColor: '#00ff88',
+        backgroundColor: 'rgba(0, 255, 136, 0.2)',
+        fill: true,
+        tension: 0.3,
+        pointRadius: 0
+      }]
+    };
+
+    const stockChart = new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        animation: {
+          duration: 1000
+        },
+        scales: {
+          y: {
+            ticks: { color: '#00ff88' },
+            grid: { color: 'rgba(0, 255, 136, 0.1)' }
+          },
+          x: {
+            ticks: { color: '#00ff88' },
+            grid: { display: false }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: { color: '#00ff88' }
+          }
+        }
+      }
+    });
+
+    setInterval(() => {
+      const newValue = 340000 + Math.random() * 10000;
+      data.labels.push(`T${data.labels.length + 1}`);
+      data.labels.shift();
+      data.datasets[0].data.push(newValue);
+      data.datasets[0].data.shift();
+      stockChart.update();
+    }, 2000);
+  </script>
+
+</body>
+</html>

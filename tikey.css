@@ -1,0 +1,39 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 20px;
+    font-size: 23px;
+    background-image: url("wii.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 2em;
+}
+button {
+    position: absolute;
+    bottom: 150px; /* Lo coloca en la parte inferior con un pequeño margen */
+    left: 50%;
+    transform: translateX(-50%); /* Lo centra horizontalmente */
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 0.5px solid #000000;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: lightgray;
+}
+.boton-izquierda {
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    padding: 15px 30px;
+    cursor: pointer;
+    background-color: #f20000;
+    font-size: 23px;
+    border-radius: 20px;/*@Ellie con esto se redondean los botones*/
+    border: none;
+    color: white;
+}

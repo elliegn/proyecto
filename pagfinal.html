@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro</title>
+  <link rel="stylesheet" href="Pagfinal.css">
+</head>
+<body>
+
+  <!-- Imágenes posicionadas en las esquinas -->
+  <img src="corazones.gif" alt="Corazones" class="image-corazones">
+  <img src="ciclo-de-vida-del-empleado.png" alt="Hombre" class="image-hombre">
+  <img src="campana.png" alt="Campana" class="image-campana">
+  <h1>Regístrate</h1>
+  <div class="box">
+    <h2>Datos del Empleado</h2>
+       <!-- Sección para mostrar el reloj -->
+    <div class="campo reloj">
+      <span id="clock">00:00:00</span>
+    </div>
+    
+    <div class="container">
+      <form class="formulario">
+        <div class="campo">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+        </div>
+        <div class="campo">
+          <label for="edad">Edad:</label>
+          <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad">
+        </div>
+        <div class="campo">
+          <label for="puesto">Puesto:</label>
+          <select id="puesto" name="puesto">
+            <option value="">Selecciona tu puesto</option>
+            <option value="empleado">Empleado</option>
+            <option value="gerente">Gerente</option>
+            <option value="supervisor">Supervisor</option>
+            <option value="director">Director</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="sangre">Tipo de Sangre:</label>
+          <select id="sangre" name="sangre">
+            <option value="">Selecciona tu tipo de sangre</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="curp">CURP:</label>
+          <input type="text" id="curp" name="curp" placeholder="Ingresa tu CURP">
+        </div>
+        <div class="campo">
+          <label for="postal">Código Postal:</label>
+          <input type="number" id="postal" name="postal" placeholder="Ingresa tu código postal">
+        </div>
+        <div class="campo">
+          <button type="button" onclick="guardarYRedirigir()">Guardar y Ver Recibo</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const options = { timeZone: 'America/Tijuana', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+      const formatter = new Intl.DateTimeFormat('es-ES', options);
+      document.getElementById('clock').textContent = formatter.format(now);
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    function guardarYRedirigir() {
+      const campos = ['nombre', 'edad', 'puesto', 'sangre', 'curp', 'postal'];
+      let datos = {};
+
+      campos.forEach(id => {
+        const valor = document.getElementById(id).value;
+        if (valor) {
+          datos[id] = valor;
+          localStorage.setItem(id, valor);
+        }
+      });
+
+      console.log("Datos guardados:", datos);
+
+      // Obtener fecha y hora actual
+      const fechaActual = new Date().toLocaleDateString('es-ES');
+      const horaActual = new Date().toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+
+      // Redirigir al recibo con los datos en la URL
+      const url = `tiket.html?nombre=${encodeURIComponent(datos.nombre)}&edad=${encodeURIComponent(datos.edad)}&puesto=${encodeURIComponent(datos.puesto)}&sangre=${encodeURIComponent(datos.sangre)}&curp=${encodeURIComponent(datos.curp)}&postal=${encodeURIComponent(datos.postal)}&fecha=${encodeURIComponent(fechaActual)}&hora=${encodeURIComponent(horaActual)}`;
+      window.location.href = url;
+    }
+
+    window.onload = function() {
+      ['nombre', 'edad', 'puesto', 'sangre', 'curp', 'postal'].forEach(id => {
+        const valor = localStorage.getItem(id);
+        if (valor) document.getElementById(id).value = valor;
+      });
+    };
+  </script>
+ <header>
+  <nav>
+    <a href="Probabilidad.html">Probabilidad</a>
+    <a href="REGALOS.html">Regalos</a>
+    <a href= "pag1inicio.html">¿De que trata?</a>
+    <a href="Ruleta.html">Casino</a>
+    <a href="bolsadeacciones.html">Bolsa de acciones</a>
+  </nav>
+</header>
+</body>
+</html>

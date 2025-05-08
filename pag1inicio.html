@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RIFA</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      background-image: url('fondo1.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: rgb(75, 157, 21);
+      text-align: center;
+      font-size: 4em;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    h2 {
+      color: rgb(151, 12, 12);
+      text-align: center;
+      font-size: 3em;
+      margin-top: 10px;
+    }
+
+    /* Estilos del encabezado */
+    header {
+      background-color: rgba(255, 255, 255, 0.7); /* Color blanco con transparencia */
+      color: #333; /* Texto oscuro */
+      padding: 10px 0;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px); /* Efecto de desenfoque */
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Bordes sutiles */
+    }
+
+    nav a {
+      color: #444;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0d9b2c; /* Cambio de color al pasar el cursor */
+    }
+
+    .santa {
+      position: absolute;
+      top: 160px;
+      left: 150px;
+      width: 350px;
+      height: 300px;
+    }
+
+    .arbol {
+      position: absolute;
+      bottom: 10px;
+      left: 460px;
+      width: 300px;
+      height: 400px;
+    }
+
+    .reno {
+      position: absolute;
+      bottom: 0;
+      right: -90px;
+      width: 400px;
+      height: 400px;
+    }
+
+    .navegacion {
+      position: fixed;
+      bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 50px;
+    }
+
+    .boton-izquierda, .boton-derecha {
+      padding: 15px 30px;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 20px;
+      border: none;
+      transition: background-color 0.3s;
+    }
+
+    .boton-izquierda {
+      background-color: #f20000;
+      color: white;
+    }
+
+    .boton-derecha {
+      background-color: #3df321;
+      color: white;
+    }
+
+    .boton-izquierda:hover {
+      background-color: #d40000;
+    }
+
+    .boton-derecha:hover {
+      background-color: #2c9c1a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado con navegación -->
+ <header>
+    <nav>
+      <a href="Probabilidad.html">Probabilidad</a>
+      <a href="REGALOS.html">Regalos</a>
+      <a href="pagfinal.html">Formulario</a>
+      <a href="Ruleta.html">Casino</a>
+      <a href="bolsadeacciones.html">Bolsa de acciones</a>
+    </nav>
+  </header>
+
+  <!-- Texto -->
+  <h1>Panzito inc</h1>
+  <br><br><br><br><br><br><br><br><br>
+  <h1>Rifa 🥳<br>En esta navidad🎄, todos pueden<br>GANAR</h1>   
+  <h2><strong>¡¡Tan solo participando en esta<br>emocionante rifa!!</strong></h2>
+
+  <!-- Imágenes -->
+  <img src="perrosurfista.png" class="santa">
+  <img src="arbolnavidad.png" class="arbol">
+  <img src="reno.png" class="reno">
+
+  <div class="navegacion">
+    <button class="boton-izquierda" onclick="window.location.href='Empresa.html'">Anterior</button>
+    <button class="boton-derecha" onclick="window.location.href='REGALOS.html'">Siguiente</button>
+  </div>  
+
+</body>
+</html>
+
