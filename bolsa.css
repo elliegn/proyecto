@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url('accionessubiendo.jpg');
-
     color: #00ff88;
     display: flex;
     flex-direction: column;
