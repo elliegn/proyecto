@@ -9,32 +9,6 @@ body {
     background-repeat: no-repeat;
     font-size: 2em;
 }
-
-.boton-izquierda {
-    position: fixed;
-    bottom: 20px;
-    left: 10px;
-    padding: 15px 30px;
-    cursor: pointer;
-    background-color: #f20000;
-    font-size: 23px;
-    border-radius: 20px;/*@Ellie con esto se redondean los botones*/
-    border: none;
-    color: white;
-}
-
-.boton-derecha {
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-    padding: 15px 30px;
-    cursor: pointer;
-    background-color: #3df321;
-    font-size: 23px;
-    border-radius: 20px;/*@Ellie con esto se redondean los botones*/
-    border: none;
-    color: white;
-
     
 }
 
