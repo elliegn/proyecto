@@ -46,7 +46,7 @@ h1 {
   text-align: center;
   color: #ffd700; /* Amarillo dorado */
   font-size: 3.5em;
-  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5); /* Sombra blanca */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra negra */
 }
 
 h2 {
