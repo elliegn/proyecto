@@ -1,193 +1,20 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-    background-image: url('mar.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    height: 100vh;
-  
-    
-    
-  }
-  #clock {
-          font-size: 3rem;
-          font-weight: bold;
-          background: #2a4177a9;
-          padding: 20px;
-          border-radius: 10px;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      }
-  .box {
-  width: 60%;
-  max-width: 400px;
-  padding: 20px;
-  border-radius: 20px;
-  text-align: center;
-  background-color: rgba(159, 203, 221, 0.801);
-  margin: auto; 
-  display: block; 
-  border: 2px solid rgb(66, 66, 66);
-
-}
-
-  h1 {
-    text-align: center;
-    color: darkred;
-    font-size: 3.5em;
-  }
-
-  h2 {
-    text-align: center;
-color: green;
-font-size: 2.5em;
-padding-top: 0.000000000000000000000000000000000000000000001px;
-padding: 0px;
-  }
-
-  .container {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  
-  .formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 300px;
-    background-color:rgba(64, 143, 150, 0.788);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(175, 105, 105, 0.1);
-  }
-  
-  .campo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  label {
-    font-weight: bold;
-    width: 120px;
-  }
-  
-  input, select {
-    padding: 10px;
-    width: 160px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    background-color: forestgreen;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-    margin-top: 20px;
-  }
-  
-  button:hover {
-    background-color: darkgreen;
-  }
-  
-
-  /* Estilos para las imágenes */
-  .image-corazones {
-    position: absolute;
-    top: 150px;
-    right: 120px;
-    max-width: 150px;
-    height: auto;
-  }
-
-  .image-hombre {
-    position: absolute;
-    bottom: 1px;
-    left: -150px;  
-    max-width: 800px; 
-  }
-
-  .image-campana {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    max-width: 200px;
-    height: auto;
-  }
-  .reloj {
-    justify-content: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
- 
-  }  
-  .boton-izquierda {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    padding: 15px 15px; /* Reduciendo el espacio lateral */
-    font-size: 18px; /* Ajuste del tamaño del texto */
-    cursor: pointer;
-    border-radius: 12px; /* Menos curvatura */
-    border: none;
-    background-color: #f20000;
-    z-index: 1000;
-    color: white;
-}
-
-   /* Estilos del encabezado */
-   header {
-    background-color: rgba(255, 255, 255, 0.7); /* Color blanco con transparencia */
-    color: #333; /* Texto oscuro */
-    padding: 10px 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px); /* Efecto de desenfoque */
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Bordes sutiles */
-  }
-
-
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-    background-image: url('mar.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
-
-h1 {
-    text-align: center;
-    color: darkred;
-    font-size: 3.5em;
-}
-
-h2 {
-    text-align: center;
-    color: green;
-    font-size: 2.5em;
-    padding: 0px;
+  margin: 0;
+  padding: 0;
+  background-color: #333; /* Color de respaldo gris oscuro */
+  background-image: url('mar.jpeg'); /* Imagen de fondo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  color: #ffffff; /* Texto blanco */
 }
 
 /* Estilos del encabezado */
 header {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
   padding: 10px 0;
   position: fixed;
   top: 0;
@@ -204,12 +31,158 @@ header nav {
 
 header nav a {
   font-size: 1.2rem;
-  color: #ffd700;
+  color: #ffd700; /* Amarillo dorado */
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 header nav a:hover {
+  color: #ffffff; /* Cambia a blanco al pasar el mouse */
+}
+
+/* Estilos de los títulos */
+h1 {
+  text-align: center;
+  color: #ffd700; /* Amarillo dorado */
+  font-size: 3.5em;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5); /* Sombra blanca */
+}
+
+h2 {
+  text-align: center;
+  color: #ffffff; /* Blanco */
+  font-size: 2.5em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra negra */
+}
+
+/* Reloj */
+#clock {
+  font-size: 3rem;
+  font-weight: bold;
+  background: rgba(42, 65, 119, 0.8); /* Fondo azul oscuro semitransparente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  color: #ffd700; /* Amarillo dorado */
+  margin: 20px auto;
+  display: inline-block;
+}
+
+/* Caja */
+.box {
+  width: 60%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgba(159, 203, 221, 0.8); /* Azul claro semitransparente */
+  margin: auto;
+  display: block;
+  border: 2px solid #ffd700; /* Borde amarillo dorado */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor del formulario */
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  background-color: rgba(64, 143, 150, 0.8); /* Verde azulado semitransparente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Campos del formulario */
+.campo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  width: 120px;
+  color: #ffd700; /* Amarillo dorado */
+}
+
+input, select {
+  padding: 10px;
+  width: 160px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Botón */
+button {
+  background-color: #ffd700; /* Amarillo dorado */
+  color: #333; /* Texto gris oscuro */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffffff; /* Cambia a blanco al pasar el mouse */
+  color: #000; /* Cambia el texto a negro */
+}
+
+/* Imágenes */
+.image-corazones {
+  position: absolute;
+  top: 150px;
+  right: 120px;
+  max-width: 150px;
+  height: auto;
+}
+
+.image-hombre {
+  position: absolute;
+  bottom: 1px;
+  left: -150px;
+  max-width: 800px;
+}
+
+.image-campana {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  max-width: 200px;
+  height: auto;
+}
+
+/* Reloj extra */
+.reloj {
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
   color: #ffffff;
+}
+
+/* Botón fijo */
+.boton-izquierda {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 15px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 12px;
+  border: none;
+  background-color: #f20000; /* Rojo brillante */
+  z-index: 1000;
+  color: white;
 }
