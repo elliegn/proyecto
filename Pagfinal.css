@@ -186,28 +186,31 @@ h2 {
 }
 
 /* Estilos del encabezado */
-header {
-    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con transparencia */
-    color: #333; /* Texto oscuro */
-    padding: 10px 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px); /* Efecto de desenfoque */
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Bordes sutiles */
-}
 
-nav a {
-    color: #444;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
 
-nav a:hover {
-    color: #0d9b2c; /* Cambio de color al pasar el cursor */
-}
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    header nav a {
+      font-size: 1.2rem;
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: #ffffff;
+    }
