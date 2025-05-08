@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta de Casino</title>
+    <link rel="stylesheet" href="ruleta.css">
+   
+</head>
+<body>
+    <h1>CASINO PNZ</h1>
+    <div class="container">
+        <div class="ruleta">
+            <div class="flecha"></div>
+            <div class="casillas">
+                <!-- Aquí irán los números generados dinámicamente -->
+            </div>
+        </div>
+        <div class="seleccion">
+            <label for="numero">Elige un número (0-36 o 00):</label>
+            <input type="text" id="numero" placeholder="Ingrese su número">
+            <button onclick="girarRuleta()">Girar</button>
+        </div>
+        <p id="resultado"></p>
+        
+        <button class="boton-menu" onclick="volverAlMenu()">Volver al Menú</button>
+    </div>
+    <script src="ruleta.js"></script>
+</body>
+</html>
