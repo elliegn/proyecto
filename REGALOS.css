@@ -1,15 +1,16 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    margin: 20px;
-    font-size: 23px;
-    background-image: url("fondonievge.jpeg");
-    background-size: cover; /* Mantiene la proporción de la imagen */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat;
-    font-size: 2em;
-}
 
+body {
+  background-image: url('fondo3.jpeg');
+  background-color: rgb(236, 236, 236);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding-top: 100px; /* Espacio para el encabezado fijo */
+  color: #ffffff;
+}
 .container {
     display: flex;
     flex-direction: column;
