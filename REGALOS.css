@@ -4,7 +4,8 @@ body {
     margin: 20px;
     font-size: 23px;
     background-image: url("fondonievge.jpeg");
-    background-size: cover;
+    background-size: cover; /* Mantiene la proporción de la imagen */
+    background-position: center; /* Centra la imagen */
     background-repeat: no-repeat;
     font-size: 2em;
 }
@@ -26,13 +27,15 @@ body {
     text-align: center;
     background-color: rgba(128, 128, 128, 0.3); /* Fondo gris claro semitransparente */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Sombra negra para llamar atención */
+    color: #ffffff; /* Texto blanco */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra negra semitransparente para el texto */
 }
 
 .block img, .block video {
     width: 400px;
     height: 300px;
     border-radius: 10px;
-    object-fit: cover;
+    object-fit: cover; /* Ajusta el contenido dentro de las dimensiones especificadas */
 }
 
 .video-container {
@@ -69,5 +72,3 @@ header nav a {
 header nav a:hover {
     color: #ffffff; /* Blanco */
 }
-
-
