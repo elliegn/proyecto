@@ -97,6 +97,7 @@ button {
     cursor: pointer;
     border-radius: 5px; /* Redondear */
     transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
 button:hover {

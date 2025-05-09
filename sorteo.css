@@ -25,7 +25,7 @@ body {
 .header nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .header nav a {
@@ -41,9 +41,18 @@ body {
 }
 
 h1 {
-  margin-top: 120px;
-  color: #ffd700; /* Amarillo */
-  font-size: 3rem;
+  margin-top: 20px;
+  color: #ffffff; /* Amarillo */
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 1), 1px 1px 5px rgba(0, 0, 0, 1); /* Sombras negras */
+  font-stretch: normal; /* Asegura que la tipografía no esté alargada */
+}
+
+p {
+  margin-top: 20px;
+  color: #fff3af; /* Amarillo */
+  font-size: 1.6rem;
   font-weight: 700;
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 1), 1px 1px 5px rgba(0, 0, 0, 1); /* Sombras negras */
   font-stretch: normal; /* Asegura que la tipografía no esté alargada */
