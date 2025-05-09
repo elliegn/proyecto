@@ -1,15 +1,17 @@
 body {
-      margin: 0;
-      padding: 0;
-      background-color: #e8f0fe;
-      background-image: url('fondo1.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      text-align: center;
-    }
+  margin: 0;
+  padding: 0;
+  background-color: #e8f0fe; /* Color de respaldo */
+  background-image: url('fondo1.jpg'); /* Imagen del fondo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+  overflow-x: hidden; /* Evita scroll horizontal */
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  text-align: center;
+}
 
     .header {
       background-color: rgba(0, 0, 0, 0.8);
@@ -39,31 +41,31 @@ body {
       color: #ffffff;
     }
 
-   .h1 {
-      margin-top: 120px;
-      color: #dedede;
-      font-size: 3rem;
-      font-weight: 700;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    }
+ .h1 {
+  margin-top: 120px;
+  color: #ffd700; /* Amarillo dorado */
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8), 1px 1px 5px rgba(0, 0, 0, 0.6); /* Sombras negras */
+}
 
-    .h2 {
-      color: #ffd000;
-      font-size: 2rem;
-      margin: 20px 0;
-      font-weight: 600;
-      text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.9), 5px 5px 15px rgba(255, 204, 0, 0.8), 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra brillante */
-      animation: glow 1.5s infinite alternate;
-    }
+.h2 {
+  color: #ffd700; /* Amarillo dorado */
+  font-size: 2rem;
+  margin: 20px 0;
+  font-weight: 600;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9), 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombras negras llamativas */
+  animation: glow 1.5s infinite alternate;
+}
 
-    @keyframes glow {
-      0% {
-        text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.9), 5px 5px 15px rgba(255, 204, 0, 0.8), 2px 2px 5px rgba(0, 0, 0, 0.7);
-      }
-      100% {
-        text-shadow: 5px 5px 20px rgba(255, 255, 255, 1), 8px 8px 25px rgba(255, 204, 0, 1), 4px 4px 10px rgba(0, 0, 0, 0.9);
-      }
-    }
+@keyframes glow {
+  0% {
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9), 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    text-shadow: 6px 6px 15px rgba(0, 0, 0, 1), 4px 4px 10px rgba(0, 0, 0, 0.9);
+  }
+}
 
     .image-container {
       margin-top: 50px;
