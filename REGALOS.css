@@ -1,16 +1,15 @@
-
 body {
-  background-image: url('fondo5.jpg');
-  background-color: rgb(236, 236, 236);
-  background-size: contain; 
-  background-position: center; 
-  background-repeat: no-repeat;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  margin: 0;
-  padding-top: 100px; /* Espacio para el encabezado fijo */
-  color: #ffffff;
-}
+    background-image: url('fondo5.jpg');
+    background-color: rgb(2, 2, 2);
+    background-size: cover; /* Cambiado a cover para que el fondo ocupe toda la pantalla */
+    background-position: center; 
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding-top: 50px; /* Espacio para el encabezado fijo */
+    color: #000000;
+  }
 .container {
     display: flex;
     flex-direction: column;
@@ -19,6 +18,34 @@ body {
     margin-top: 20px;
 }
 
+.h1 {
+    color: #ffd700; /* Amarillo */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1); /* Sombras negras llamativas */
+    font-size: 2.5rem;
+    margin: 20px 0;
+    animation: glow 1.5s infinite alternate;
+    font-weight: bold;
+  }
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1);
+    }
+    100% {
+      text-shadow: 6px 6px 15px rgba(255, 255, 0, 1), 4px 4px 10px rgba(0, 0, 0, 1); /* Añade un brillo amarillo llamativo */
+    }
+  }
+  
+      
+  
+  .h2 {
+    color: #fff09a; /* Amarillo brillante */
+    text-shadow: 2px 2px 5px rgba(12, 12, 12, 0.8), /* Sombra negra */
+                 4px 4px 10px rgba(0, 0, 0, 0.7); /* Sombra negra */
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+  }
 .block {
     width: 70%; /* Reduce el ancho */
     max-width: 500px; /* Reduce el tamaño máximo */
@@ -30,8 +57,12 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Sombra negra para llamar atención */
     color: #ffffff; /* Texto blanco */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra negra semitransparente para el texto */
+    font-family: 'Poppins', sans-serif;
 }
-
+.block p {
+    font-weight: bold; /* Texto en negritas para las descripciones */
+    font-family: 'Poppins', sans-serif;
+}
 .block img, .block video {
     width: 100%; /* Ajusta al tamaño del contenedor */
     max-width: 300px; /* Tamaño máximo */
@@ -52,17 +83,20 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
+    font-family: 'Poppins', sans-serif;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 header nav {
     display: flex;
+    font-family: 'Poppins', sans-serif;
     justify-content: center;
     gap: 20px;
 }
 
 header nav a {
     font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
     color: #ffd700; /* Amarillo */
     text-decoration: none;
     font-weight: 600;
@@ -71,4 +105,5 @@ header nav a {
 
 header nav a:hover {
     color: #ffffff; /* Blanco */
+    font-family: 'Poppins', sans-serif;
 }

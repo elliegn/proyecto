@@ -1,6 +1,6 @@
 body{
-        background-color: cornflowerblue;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: rgb(0, 0, 0);
+        font-family: 'Poppins', sans-serif;
     text-align: center;
     background-image: url('fondo2.jpg');
     margin: 20px;
@@ -9,41 +9,66 @@ body{
     background-repeat: no-repeat;
     font-size: 2em;
     }h1{
-
-        color: antiquewhite;
-        text-align: center;
+        color: #fff5bb; /* Amarillo */
+        text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1); /* Sombras negras llamativas */
+        font-size: 66px;
+        margin: 20px 0;
+        font-weight: bold;
+        animation: glow-h1 2.5s infinite alternate; /* Usar keyframes específicos para h1 */
     }
+
+    @keyframes glow-h1 {
+        0% {
+          text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1);
+        }
+        100% {
+          text-shadow: 6px 6px 15px rgb(255, 157, 0), 4px 4px 10px rgba(0, 0, 0, 1); /* Brillo amarillo llamativo */
+        }
+      }
+
     .block {
-    width: 80%;
+    width: 100%;
     max-width: 600px;
     padding: 20px;
     border: 3.5px solid #d5d83d;
     border-radius: 20px;
     text-align: center;
     background-color: rgb(140, 138, 143);
-}.container {
+}
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
     margin-top: 20px;
-}.buton {
+}
+
+.buton {
     position: fixed;
       padding: 15px 30px;
       font-size: 20px;
       cursor: pointer;
       border-radius: 20px;
       border: none;
-      background-color: #2b5660;
+      background-color: #7a7a7a95;
       transition: background-color 0.3s;
       z-index: 1000;
-      color: wheat;
+      color: #ffaa00;
+      font-weight: bold;
       } 
+
+      .buton:hover {
+        background-color: #222222a2; /* Cambia el color del botón */
+        transform: scale(1.1); /* Agranda el botón ligeramente */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Añade una sombra para resaltar */
+    }
       
-  p{
+p{
     text-align: center;
-color: rgb(2, 255, 196);
-font-size: 1em;
-padding-top: 0.000000000000000000000000000000000000000000001px;
-padding: 0px;
+    color: #ffd700; /* Amarillo */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1); /* Sombras negras llamativas */ 
+    font-size: 1em;
+    padding-top: 0.000000000000000000000000000000000000000000001px;
+    padding: 0px;
   }

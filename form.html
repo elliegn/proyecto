@@ -12,7 +12,7 @@
   <img src="corazones.gif" alt="Corazones" class="image-corazones">
   <img src="ciclo-de-vida-del-empleado.png" alt="Hombre" class="image-hombre">
   <img src="campana.png" alt="Campana" class="image-campana">
-  <h1> </br> </br>Regístrate</h1>
+  <h1>Regístrate</h1>
   <div class="box">
     <h2>Datos del Empleado</h2>
        <!-- Sección para mostrar el reloj -->
@@ -99,7 +99,7 @@
       const horaActual = new Date().toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
 
       // Redirigir al recibo con los datos en la URL
-      const url = `tiket.html?nombre=${encodeURIComponent(datos.nombre)}&edad=${encodeURIComponent(datos.edad)}&puesto=${encodeURIComponent(datos.puesto)}&sangre=${encodeURIComponent(datos.sangre)}&curp=${encodeURIComponent(datos.curp)}&postal=${encodeURIComponent(datos.postal)}&fecha=${encodeURIComponent(fechaActual)}&hora=${encodeURIComponent(horaActual)}`;
+      const url = `tikey.html?nombre=${encodeURIComponent(datos.nombre)}&edad=${encodeURIComponent(datos.edad)}&puesto=${encodeURIComponent(datos.puesto)}&sangre=${encodeURIComponent(datos.sangre)}&curp=${encodeURIComponent(datos.curp)}&postal=${encodeURIComponent(datos.postal)}&fecha=${encodeURIComponent(fechaActual)}&hora=${encodeURIComponent(horaActual)}`;
       window.location.href = url;
     }
 

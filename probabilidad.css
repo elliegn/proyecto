@@ -21,14 +21,44 @@ body {
 }
 
 /* Encabezados */
+/* Título principal */
 h1 {
-  color: #ffffff; /* Blanco */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra negra semitransparente */
+  color: #ffd700; /* Amarillo */
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1); /* Sombras negras llamativas */
   font-size: 48px;
   margin: 20px 0;
+  animation: glow-h1 2.5s infinite alternate; /* Usar keyframes específicos para h1 */
   font-weight: bold;
 }
 
+@keyframes glow-h1 {
+  0% {
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1);
+  }
+  100% {
+    text-shadow: 6px 6px 15px rgba(255, 255, 0, 1), 4px 4px 10px rgba(0, 0, 0, 1); /* Brillo amarillo llamativo */
+  }
+}
+
+/* Título secundario */
+h2 {
+  color: #ffffff; /* Blanco */
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1); /* Sombras negras */
+  font-size: 36px;
+  margin: 30px 0 10px;
+  animation: glow-h2 1.5s infinite alternate; /* Usar keyframes específicos para h2 */
+}
+
+@keyframes glow-h2 {
+  0% {
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1);
+  }
+  100% {
+    text-shadow: 6px 6px 15px rgb(171, 171, 171), 4px 4px 10px rgba(0, 0, 0, 1); /* Brillo gris llamativo */
+  }
+}
+
+/* Párrafo */
 p {
   color: #ffffff; /* Blanco */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra negra semitransparente */
@@ -36,13 +66,6 @@ p {
   margin: 10px 0;
 }
 
-/* Título secundario */
-h2 {
-  color: #ffffff; /* Blanco */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra negra semitransparente */
-  font-size: 36px;
-  margin: 30px 0 10px;
-}
 
 header {
   background-color: rgba(0, 0, 0, 0.8);
@@ -183,7 +206,7 @@ html, body {
 .img-pinguino {
   position: absolute;
   top: 200px;
-  left: -170px; /* Antes: -120px, ahora más a la izquierda */
+  left: -250px; /* Antes: -120px, ahora más a la izquierda */
   width: 250px;
 }
 
