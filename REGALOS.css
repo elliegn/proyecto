@@ -2,7 +2,7 @@
 body {
   background-image: url('fondo5.jpg');
   background-color: rgb(236, 236, 236);
-  background-size: cover; 
+  background-size: contain; 
   background-position: center; 
   background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif;
@@ -20,8 +20,8 @@ body {
 }
 
 .block {
-    width: 80%;
-    max-width: 600px;
+    width: 70%; /* Reduce el ancho */
+    max-width: 500px; /* Reduce el tamaño máximo */
     padding: 20px;
     border: 3.5px solid rgba(128, 128, 128, 0.8); /* Borde gris semitransparente */
     border-radius: 20px;
@@ -33,10 +33,9 @@ body {
 }
 
 .block img, .block video {
-    width: 400px;
-    height: 300px;
-    border-radius: 10px;
-    object-fit: cover; /* Ajusta el contenido dentro de las dimensiones especificadas */
+    width: 100%; /* Ajusta al tamaño del contenedor */
+    max-width: 300px; /* Tamaño máximo */
+    height: auto; /* Mantén las proporciones */
 }
 
 .video-container {
