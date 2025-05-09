@@ -183,7 +183,7 @@ html, body {
 .img-pinguino {
   position: absolute;
   top: 200px;
-  left: -120px;
+  left: -150px; /* Antes: -120px, ahora más a la izquierda */
   width: 250px;
 }
 
