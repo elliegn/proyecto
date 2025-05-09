@@ -3,102 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PNZ - Inversion Inteligente🧠🧠</title>
+  <title>Inversión Inteligente</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="bolsa.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-  <div class="container">
-    <h1>🚀 ¡PZN ha hecho millonarios! 💸</h1>
-    <p id="valorActual">💹 Valor actual: <strong>$346,968 USD</strong></p>
+  <div class="contenedor">
+    <h1>🚀 ¡PZN millonarios! 💸</h1>
+    <p id="valorActual">Valor actual: <strong>$346,968 USD</strong></p>
 
-    <div class="chart-container">
+    <!-- Gráfica SIEMPRE visible -->
+    <div class="grafica">
       <canvas id="stockChart"></canvas>
     </div>
 
-    <div class="button-group">
-      <button class="buton" onclick="window.location.href='index.html'">Página Principal</button>
-      <button class="buton" onclick="invertir()">Invertir</button>
+    <!-- Sección dinámica de pasos -->
+    <div class="pasos">
+      <!-- Paso 1: Seleccionar cantidad -->
+      <div id="paso1" class="paso activo">
+        <h2>Selecciona una cantidad para invertir:</h2>
+        <input type="number" id="cantidad" placeholder="Ingresa la cantidad" required />
+        <button id="siguientePaso1">Siguiente</button>
+      </div>
+
+      <!-- Paso 2: Seleccionar método de pago -->
+      <div id="paso2" class="paso">
+        <h2>Selecciona tu método de pago:</h2>
+        <form id="formulario">
+          <div class="metodo">
+            <input type="radio" id="tarjeta" name="pago" value="tarjeta" required />
+            <label for="tarjeta">Tarjeta</label>
+            <img src="tarjeta.png" alt="Tarjeta" class="icono" />
+          </div>
+
+          <div class="metodo">
+            <input type="radio" id="cupon" name="pago" value="cupon" />
+            <label for="cupon">Cupones</label>
+            <img src="cupon.png" alt="Cupon" class="icono" />
+          </div>
+
+          <div class="metodo">
+            <input type="radio" id="apple" name="pago" value="apple" />
+            <label for="apple">Apple Pay</label>
+            <img src="applepay.png" alt="Apple Pay" class="icono" />
+          </div>
+
+          <div class="metodo">
+            <input type="radio" id="oxxo" name="pago" value="oxxo" />
+            <label for="oxxo">Oxxo</label>
+            <img src="oxxo.png" alt="Oxxo" class="icono" />
+          </div>
+
+          <button type="button" id="siguientePaso2">Siguiente</button>
+        </form>
+      </div>
+
+      <!-- Paso 3: Detalles del método de pago -->
+      <div id="paso3" class="paso">
+        <h2>Completa los detalles:</h2>
+        <div id="detallesTarjeta" class="detalles">
+          <input type="text" placeholder="Número de tarjeta" id="numTarjeta" />
+          <input type="password" placeholder="PIN" id="pinTarjeta" />
+        </div>
+
+        <div id="detallesCupon" class="detalles">
+          <input type="text" placeholder="Número de empleado" id="numEmpleado" />
+          <p>(Verificaremos los cupones y su valor)</p>
+        </div>
+
+        <div id="detallesApple" class="detalles">
+          <input type="text" placeholder="Modelo de iPhone" id="modeloIphone" />
+        </div>
+
+        <div id="detallesOxxo" class="detalles">
+          <button type="button" id="ticket">Generar Ticket</button>
+          <p id="mensajeTicket" style="display: none;">Ticket: <strong>1234-5678-9101</strong></p>
+        </div>
+
+        <button id="siguientePaso3">Siguiente</button>
+      </div>
+
+      <!-- Explosión de PZN -->
+      <div id="explosion" class="paso">
+        <h2>💥 ¡Tu inversión explotó! 💥</h2>
+        <p>El valor de PZN ahora es de <strong>$500,000,000,000 USD</strong></p>
+        <audio id="victoriaSound" src="orchestral-win-331233.mp3" preload="auto"></audio>
+      </div>
     </div>
   </div>
 
-  <img src="stonks.jpg" alt="Stonks" class="image-corazones" />
+  <img src="stonks.jpg" alt="Stonks" class="imagen" />
 
-  <!-- Sonido de victoria -->
-  <audio id="victoriaSound" src="orchestral-win-331233.mp3" preload="auto"></audio>
+  <script src="bolsa.js"></script>
 
-  <script>
-    const ctx = document.getElementById('stockChart').getContext('2d');
-    const valorActualEl = document.getElementById('valorActual');
-    const victoriaSound = document.getElementById('victoriaSound');
-
-    const data = {
-      labels: Array.from({ length: 20 }, (_, i) => `T${i + 1}`),
-      datasets: [{
-        label: 'Valor PZN',
-        data: Array.from({ length: 20 }, () => 340000 + Math.random() * 10000),
-        borderColor: '#00ff88',
-        backgroundColor: 'rgba(0, 255, 136, 0.2)',
-        fill: true,
-        tension: 0.3,
-        pointRadius: 0
-      }]
-    };
-
-    const stockChart = new Chart(ctx, {
-      type: 'line',
-      data: data,
-      options: {
-        responsive: true,
-        animation: {
-          duration: 1000
-        },
-        scales: {
-          y: {
-            ticks: { color: '#00ff88' },
-            grid: { color: 'rgba(0, 255, 136, 0.1)' }
-          },
-          x: {
-            ticks: { color: '#00ff88' },
-            grid: { display: false }
-          }
-        },
-        plugins: {
-          legend: {
-            labels: { color: '#00ff88' }
-          }
-        }
-      }
-    });
-
-    setInterval(() => {
-      const newValue = 340000 + Math.random() * 10000;
-      data.labels.push(`T${data.labels.length + 1}`);
-      data.labels.shift();
-      data.datasets[0].data.push(newValue);
-      data.datasets[0].data.shift();
-      stockChart.update();
-
-      const lastValue = Math.round(data.datasets[0].data.at(-1));
-      valorActualEl.innerHTML = `💹 Valor actual: <strong>$${lastValue.toLocaleString()} USD</strong>`;
-    }, 2000);
-
-    function invertir() {
-      victoriaSound.currentTime = 0;
-      victoriaSound.play();
-
-      const newValue = 500_000_000_000;
-      for (let i = 0; i < data.datasets[0].data.length; i++) {
-        data.datasets[0].data[i] = newValue;
-      }
-      data.labels = data.labels.map((_, i) => `Boom${i + 1}`);
-      stockChart.update();
-
-      valorActualEl.innerHTML = `💹 Valor actual: <strong>$${newValue.toLocaleString()} USD</strong>`;
-    }
-  </script>
-
+<header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="sorteo.html">¿De qué trata?</a>
+    <a href="regalos.html">Regalos</a>
+    <a href="probabilidad.html">Tu oportunidad</a>
+    <a href="ruleta.html">Casino</a>
+    <a href="form.html">Formulario</a>
+  </nav>
+</header>
 </body>
 </html>
-
