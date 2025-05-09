@@ -207,4 +207,7 @@ html, body {
   right: -150px;
   width: 250px;
 }
-
+.tragamonedas {
+  width: 100px; /* Ajusta el ancho */
+  height: auto; /* Mantiene la proporción */
+}
