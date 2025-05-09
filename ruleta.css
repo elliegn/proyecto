@@ -6,7 +6,7 @@ body {
     height: 100vh;
     background-color: #222;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-image: url("casinofondo.jpg");
 }
 
@@ -62,17 +62,25 @@ body {
 }
 
 input {
-    padding: 5px;
+    padding: 10px;
     font-size: 16px;
+    border-radius: 5px; /* Redondear */
+    border: 1px solid #ccc;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 20px;
     background-color: red;
     border: none;
     color: white;
     font-size: 18px;
     cursor: pointer;
+    border-radius: 5px; /* Redondear */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: darkred;
 }
 
 .boton-menu {
@@ -83,41 +91,61 @@ button {
     background-color: rgb(0, 179, 255);
     border: none;
     cursor: pointer;
+    border-radius: 5px; /* Redondear */
 }
 
 #resultado {
     margin-top: 15px;
     font-size: 20px;
-}h1{
-text-align: center;
-font-size: 4em;
-margin-top: 5px;
-font-weight: bold;}
+}
 
-    header {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 10px 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
+.gif-container {
+    display: none; /* Inicialmente oculto */
+    margin-top: 20px;
+    text-align: center;
+}
 
-    header nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
+.gif-container img {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    width: 500px; /* Ajusta el ancho */
+    height: auto; /* Mantiene la proporción */
+    display: block;
+    margin: 0 auto; /* Centra horizontalmente */
+    position: relative; /* Necesario para ajustar su posición */
+    top: -10fpx; /* Ajusta este valor para moverlo hacia arriba(num negativos) o abajo (numero positivos) */
+}
 
-    header nav a {
-      font-size: 1.2rem;
-      color: #ffd700;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
 
-    header nav a:hover {
-      color: #ffffff;
-    }
+  header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  header nav a {
+    font-size: 1.2rem;
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  header nav a:hover {
+    color: #ffffff;
+  }
+  p {
+    color: #ffffff; /* Blanco */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra negra semitransparente */
+    font-size: 20px;
+    margin: 10px 0;
+  }

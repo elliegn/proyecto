@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding-top: -200px; /* Espacio para el encabezado fijo */
+  padding-top: -100px; /* Espacio para el encabezado fijo */
   background-color: #333; /* Color de respaldo gris oscuro */
   background-image: url('fondo4.jpg'); /* Imagen de fondo */
   background-size: cover;
@@ -44,44 +44,55 @@ header nav a:hover {
 /* Estilos de los títulos */
 h1 {
   text-align: center;
-  color: #ffd700; /* Amarillo dorado */
+  color: #f8d134; /* Amarillo dorado */
   font-size: 3.5em;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra negra */
-  margin: 10px;
+  text-shadow: 6px 5px 4px rgba(0, 0, 0, 0.7); /* Sombra negra */
+  margin: 70px;
 }
 
 h2 {
   text-align: center;
   color: #ffffff; /* Blanco */
-  font-size: 2.5em;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra negra */
+  font-size: 2em;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7); /* Sombra negra */
 }
 
-/* Reloj */
-#clock {
-  font-size: 3rem;
-  font-weight: bold;
-  background: rgba(133, 133, 133, 0.445); /* Fondo gris oscuro semitransparente */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  color: #ffd700; /* Amarillo dorado */
-  margin: 20px auto;
-  display: inline-block;
-}
-
-/* Caja */
+/* Caja del formulario */
 .box {
   width: 60%;
   max-width: 400px;
   padding: 20px;
   border-radius: 20px;
   text-align: center;
-  background-color: rgba(110, 110, 110, 0.8); /* Gris semitransparente */
+  background-color: rgba(102, 102, 102, 0.681); /* Gris semitransparente */
   margin: auto;
   display: block;
   border: 2px solid #ffd700; /* Borde amarillo dorado */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Sombra inicial */
+  animation: glow-box 2s infinite alternate; /* Animación de brillo */
+}
+
+/* Animación de brillo para la caja */
+@keyframes glow-box {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 20px rgb(255, 183, 2), 0 0 40px rgba(255, 215, 0, 0.8);
+  }
+}
+
+/* Reloj (sin animación de brillo) */
+#clock {
+  font-size: 3rem;
+  font-weight: bold;
+  background: rgba(133, 133, 133, 0.378); /* Fondo gris oscuro semitransparente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  color: #ffd700; /* Amarillo dorado */
+  margin: 20px auto;
+  display: inline-block;
 }
 
 
@@ -160,9 +171,9 @@ button:hover {
 
 .image-campana {
   position: absolute;
-  top: 20px;
+  top: 80px;
   left: 20px;
-  max-width: 200px;
+  max-width: 170px;
   height: auto;
 }
 
