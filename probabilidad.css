@@ -213,5 +213,5 @@ html, body {
   display: block;
   margin: 0 auto; /* Centra horizontalmente */
   position: relative; /* Necesario para ajustar su posición */
-  top: -20px; /* Ajusta este valor para moverlo hacia arriba o abajo */
+  top: -25px; /* Ajusta este valor para moverlo hacia arriba(num negativos) o abajo (numero positivos) */
 }
