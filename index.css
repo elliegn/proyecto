@@ -1,74 +1,99 @@
-body{
-        background-color: rgb(0, 0, 0);
-        font-family: 'Poppins', sans-serif;
-    text-align: center;
-    background-image: url('fondo2.jpg');
-    margin: 20px;
-    font-size: 23px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-size: 2em;
-    }h1{
-        color: #fff5bb; /* Amarillo */
-        text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1); /* Sombras negras llamativas */
-        font-size: 66px;
-        margin: 20px 0;
-        font-weight: bold;
-        animation: glow-h1 2.5s infinite alternate; /* Usar keyframes específicos para h1 */
-    }
-
-    @keyframes glow-h1 {
-        0% {
-          text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1);
-        }
-        100% {
-          text-shadow: 6px 6px 15px rgb(255, 157, 0), 4px 4px 10px rgba(0, 0, 0, 1); /* Brillo amarillo llamativo */
-        }
-      }
-
-    .block {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    border: 3.5px solid #d5d83d;
-    border-radius: 20px;
-    text-align: center;
-    background-color: rgb(140, 138, 143);
+/* General styles */
+body {
+  background-color: rgb(0, 0, 0);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background-image: url('fondo2.jpg');
+  margin: 0;
+  font-size: 1.5em; /* Tamaño base adaptable */
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana */
 }
 
+h1 {
+  color: #fff5bb; /* Amarillo */
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1);
+  font-size: 3rem;
+  margin: 20px 0;
+  font-weight: bold;
+  animation: glow-h1 2.5s infinite alternate;
+}
+
+@keyframes glow-h1 {
+  0% {
+      text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1);
+  }
+  100% {
+      text-shadow: 6px 6px 15px rgb(255, 157, 0), 4px 4px 10px rgba(0, 0, 0, 1);
+  }
+}
+
+p {
+  text-align: center;
+  color: #ffd700; /* Amarillo */
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1);
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Container and button styles */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .buton {
-    position: fixed;
-      padding: 15px 30px;
-      font-size: 20px;
-      cursor: pointer;
-      border-radius: 20px;
-      border: none;
-      background-color: #7a7a7a95;
-      transition: background-color 0.3s;
-      z-index: 1000;
-      color: #ffaa00;
-      font-weight: bold;
-      } 
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background-color: #7a7a7a95;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  color: #ffaa00;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+}
 
-      .buton:hover {
-        background-color: #222222a2; /* Cambia el color del botón */
-        transform: scale(1.1); /* Agranda el botón ligeramente */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Añade una sombra para resaltar */
-    }
-      
-p{
-    text-align: center;
-    color: #ffd700; /* Amarillo */
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1); /* Sombras negras llamativas */ 
-    font-size: 1em;
-    padding-top: 0.000000000000000000000000000000000000000000001px;
-    padding: 0px;
+.buton:hover {
+  background-color: #222222a2;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2.5rem;
   }
+
+  p {
+      font-size: 1rem;
+  }
+
+  .buton {
+      font-size: 1rem;
+      padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 2rem;
+  }
+
+  p {
+      font-size: 0.9rem;
+  }
+
+  .buton {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+  }
+}
