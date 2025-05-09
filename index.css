@@ -1,0 +1,49 @@
+body{
+        background-color: cornflowerblue;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-image: url('fondo2.jpeg');
+    margin: 20px;
+    font-size: 23px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 2em;
+    }h1{
+
+        color: antiquewhite;
+        text-align: center;
+    }
+    .block {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border: 3.5px solid #d5d83d;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgb(140, 138, 143);
+}.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}.buton {
+    position: fixed;
+      padding: 15px 30px;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 20px;
+      border: none;
+      background-color: #2b5660;
+      transition: background-color 0.3s;
+      z-index: 1000;
+      color: wheat;
+      } 
+      
+  p{
+    text-align: center;
+color: rgb(2, 255, 196);
+font-size: 1em;
+padding-top: 0.000000000000000000000000000000000000000000001px;
+padding: 0px;
+  }
