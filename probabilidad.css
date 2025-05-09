@@ -208,6 +208,10 @@ html, body {
   width: 250px;
 }
 .tragamonedas {
-  width: 100px; /* Ajusta el ancho */
+  width: 200px; /* Ajusta el ancho */
   height: auto; /* Mantiene la proporción */
+  display: block;
+  margin: 0 auto; /* Centra horizontalmente */
+  position: relative; /* Necesario para ajustar su posición */
+  top: -20px; /* Ajusta este valor para moverlo hacia arriba o abajo */
 }
