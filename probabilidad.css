@@ -141,6 +141,12 @@ header nav a:hover {
   margin-top: 20px;
 }
 
+h3 {
+  font-size: 20px;
+  color: #fff1c6; /* Blanco */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra negra semitransparente */
+
+}
 /* Sección de comentarios */
 .comentarios {
   margin-top: 40px;
@@ -151,7 +157,7 @@ header nav a:hover {
 }
 
 .com {
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+  background-color: rgba(255, 255, 255, 0.547); /* Fondo blanco semitransparente */
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -166,8 +172,11 @@ header nav a:hover {
 }
 
 .com p strong {
-  color: #000000; /* Negro */
+  color: #ffffff; /* Negro */
+  font-weight: bolder;
+  text-shadow: 4px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra negra semitransparente */
 }
+
 
 /* Contenedor de navegación */
 .navegacion {
