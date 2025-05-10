@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RECIBO😝</title>
+    <title>Recibo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="tikey.css"> 
     <style>
         body {
@@ -51,24 +52,19 @@
         <p class="dato"><strong>Este documento certifica que los datos han sido registrados correctamente.</strong></p>
     </div>
 
-    <button onclick="window.location.href='index.html'">Volver a<br> página principal</button>
+   
 
-    <script>
-        function obtenerDatos() {
-            const params = new URLSearchParams(window.location.search);
-            document.getElementById("recibo-nombre").textContent = params.get("nombre") || "No ingresado";
-            document.getElementById("recibo-edad").textContent = params.get("edad") || "No ingresado";
-            document.getElementById("recibo-puesto").textContent = params.get("puesto") || "No ingresado";
-            document.getElementById("recibo-sangre").textContent = params.get("sangre") || "No ingresado";
-            document.getElementById("recibo-curp").textContent = params.get("curp") || "No ingresado";
-            document.getElementById("recibo-postal").textContent = params.get("postal") || "No ingresado";
-
-            // Obtener fecha y hora desde la URL
-            document.getElementById("fecha").textContent = params.get("fecha") || "Fecha no registrada";
-            document.getElementById("hora").textContent = params.get("hora") || "Hora no registrada";
-        }
-
-        obtenerDatos();
-    </script>
+    <script src="tikey.js"></script>
+      <header>
+        <nav>
+          <a href="index.html">Inicio</a>
+          <a href="sorteo.html">¿De qué trata?</a>
+          <a href="REGALOS.html">Regalos</a>
+          <a href="probabilidad.html">Tu oportunidad de ganar</a>
+          <a href="ruleta.html">Casino</a>
+          <a href="bolsa.html">Inversiones</a>
+          <a href="form.html">Formulario</a>
+        </nav>
+      </header>
 </body>
 </html>

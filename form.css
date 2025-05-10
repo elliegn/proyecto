@@ -1,18 +1,17 @@
+/* General Styles */
 body {
   margin: 0;
-  padding-top: -100px; /* Espacio para el encabezado fijo */
+  padding-top: 100px; /* Espacio para el encabezado fijo */
   background-color: #333; /* Color de respaldo gris oscuro */
   background-image: url('fondo4.jpg'); /* Imagen de fondo */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   font-family: 'Poppins', sans-serif;
-  height: 100vh;
-  overflow: hidden;
   color: #ffffff; /* Texto blanco */
 }
 
-/* Estilos del encabezado */
+/* Header Styles */
 header {
   background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
   padding: 10px 0;
@@ -27,6 +26,8 @@ header nav {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+  padding: 0 10px; /* Espaciado lateral */
 }
 
 header nav a {
@@ -41,13 +42,34 @@ header nav a:hover {
   color: #ffffff; /* Cambia a blanco al pasar el mouse */
 }
 
-/* Estilos de los títulos */
+@media (max-width: 768px) {
+  header nav {
+    gap: 15px; /* Reduce el espacio entre enlaces */
+  }
+
+  header nav a {
+    font-size: 1rem; /* Reduce el tamaño de fuente */
+  }
+}
+
+@media (max-width: 480px) {
+  header nav {
+    gap: 10px; /* Reduce aún más el espacio entre enlaces */
+  }
+
+  header nav a {
+    font-size: 0.9rem; /* Reduce aún más el tamaño de fuente */
+  }
+}
+
+
+/* Title Styles */
 h1 {
   text-align: center;
   color: #f8d134; /* Amarillo dorado */
   font-size: 3.5em;
   text-shadow: 6px 5px 4px rgba(0, 0, 0, 0.7); /* Sombra negra */
-  margin: 70px;
+  margin-bottom: 40px;
 }
 
 h2 {
@@ -55,24 +77,39 @@ h2 {
   color: #ffffff; /* Blanco */
   font-size: 2em;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7); /* Sombra negra */
+  margin-bottom: 20px;
 }
 
-/* Caja del formulario */
+/* Form Box */
 .box {
-  width: 60%;
+  width: 90%;
   max-width: 400px;
   padding: 20px;
   border-radius: 20px;
   text-align: center;
-  background-color: rgba(102, 102, 102, 0.681); /* Gris semitransparente */
-  margin: auto;
-  display: block;
+  background-color: rgba(102, 102, 102, 0.8); /* Gris semitransparente */
+  margin: 20px auto; /* Centra la caja con margen superior e inferior */
   border: 2px solid #ffd700; /* Borde amarillo dorado */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Sombra inicial */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Sombra */
   animation: glow-box 2s infinite alternate; /* Animación de brillo */
 }
 
-/* Animación de brillo para la caja */
+@media (max-width: 768px) {
+  .box {
+    width: 80%; /* Ajusta el ancho para pantallas medianas */
+    padding: 18px; /* Reduce ligeramente el espaciado interno */
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: 95%; /* La caja ocupará casi todo el ancho de la pantalla */
+    padding: 15px; /* Reduce el espaciado interno */
+  }
+}
+
+
+/* Brillo de la caja */
 @keyframes glow-box {
   0% {
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.4);
@@ -82,11 +119,11 @@ h2 {
   }
 }
 
-/* Reloj (sin animación de brillo) */
+/* Clock Styles */
 #clock {
   font-size: 3rem;
   font-weight: bold;
-  background: rgba(133, 133, 133, 0.378); /* Fondo gris oscuro semitransparente */
+  background: rgba(133, 133, 133, 0.5); /* Fondo gris oscuro semitransparente */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -95,8 +132,7 @@ h2 {
   display: inline-block;
 }
 
-
-/* Contenedor del formulario */
+/* Formulario */
 .container {
   display: flex;
   justify-content: center;
@@ -107,14 +143,9 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 300px;
-  background-color: rgba(128, 128, 128, 0.8); /* Gris semitransparente */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
 
-/* Campos del formulario */
 .campo {
   display: flex;
   justify-content: space-between;
@@ -129,7 +160,7 @@ label {
 
 input, select {
   padding: 10px;
-  width: 160px;
+  width: 60%;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
@@ -139,12 +170,10 @@ button {
   background-color: #ffd700; /* Amarillo dorado */
   color: #333; /* Texto gris oscuro */
   border: none;
-  padding: 10px 20px;
+  padding: 15px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  width: 100%;
-  margin-top: 20px;
   transition: background-color 0.3s ease;
 }
 
@@ -156,33 +185,96 @@ button:hover {
 /* Imágenes */
 .image-corazones {
   position: absolute;
-  top: 150px;
-  right: 120px;
-  max-width: 150px;
+  top: 100px;
+  right: 20px;
+  max-width: 100px;
   height: auto;
 }
 
 .image-hombre {
   position: absolute;
-  bottom: 1px;
-  left: -150px;
-  max-width: 800px;
+  bottom: 0;
+  left: 0;
+  max-width: 400px;
+  height: auto;
+  z-index: -1; /* Envía la imagen al fondo */
 }
 
 .image-campana {
   position: absolute;
-  top: 80px;
-  left: 20px;
-  max-width: 170px;
+  top: 50px;
+  left: 30px;
+  max-width: 120px;
   height: auto;
 }
 
-/* Reloj extra */
-.reloj {
-  justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
-  color: #ffffff;
+/* Media Queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .box {
+    width: 80%;
+  }
+
+  .image-corazones {
+    max-width: 80px;
+    top: 80px;
+    right: 15px;
+  }
+
+  .image-hombre {
+    max-width: 300px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .image-campana {
+    max-width: 100px;
+  }
+
+  button {
+    font-size: 1rem;
+  }
 }
 
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
 
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .box {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .image-corazones {
+    max-width: 60px;
+    top: 50px;
+    right: 10px;
+  }
+
+  .image-hombre {
+    max-width: 200px;
+    bottom: 20px;
+    left: 5px;
+  }
+
+  .image-campana {
+    max-width: 80px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

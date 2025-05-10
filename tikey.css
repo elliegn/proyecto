@@ -1,5 +1,5 @@
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     margin: 20px;
     font-size: 23px;
@@ -8,32 +8,54 @@ body {
     background-repeat: no-repeat;
     font-size: 2em;
 }
-button {
-    position: absolute;
-    bottom: 150px; /* Lo coloca en la parte inferior con un pequeño margen */
-    left: 50%;
-    transform: translateX(-50%); /* Lo centra horizontalmente */
-    background-color: white;
-    color: black;
-    font-size: 20px;
-    padding: 10px 20px;
-    border: 0.5px solid #000000;
-    border-radius: 15px;
-    cursor: pointer;
-}
 
-button:hover {
-    background-color: lightgray;
-}
-.boton-izquierda {
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
+    padding: 10px 0;
     position: fixed;
-    bottom: 20px;
-    left: 10px;
-    padding: 15px 30px;
-    cursor: pointer;
-    background-color: #f20000;
-    font-size: 23px;
-    border-radius: 20px;/*@Ellie con esto se redondean los botones*/
-    border: none;
-    color: white;
-}
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+    padding: 0 10px; /* Espaciado lateral */
+  }
+  
+  header nav a {
+    font-size: 1.2rem;
+    color: #ffd700; /* Amarillo dorado */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  header nav a:hover {
+    color: #ffffff; /* Cambia a blanco al pasar el mouse */
+  }
+  
+  @media (max-width: 768px) {
+    header nav {
+      gap: 15px; /* Reduce el espacio entre enlaces */
+    }
+  
+    header nav a {
+      font-size: 1rem; /* Reduce el tamaño de fuente */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header nav {
+      gap: 10px; /* Reduce aún más el espacio entre enlaces */
+    }
+  
+    header nav a {
+      font-size: 0.9rem; /* Reduce aún más el tamaño de fuente */
+    }
+  }
+  

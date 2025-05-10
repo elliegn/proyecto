@@ -8,15 +8,16 @@
   <link rel="stylesheet" href="form.css">
 </head>
 <body>
-
   <!-- Imágenes posicionadas en las esquinas -->
   <img src="corazones.gif" alt="Corazones" class="image-corazones">
   <img src="ciclo-de-vida-del-empleado.png" alt="Hombre" class="image-hombre">
   <img src="campana.png" alt="Campana" class="image-campana">
+  
   <h1>Regístrate</h1>
+  
   <div class="box">
     <h2>Datos del Empleado</h2>
-       <!-- Sección para mostrar el reloj -->
+    <!-- Sección para mostrar el reloj -->
     <div class="campo reloj">
       <span id="clock">00:00:00</span>
     </div>
@@ -35,10 +36,10 @@
           <label for="puesto">Puesto:</label>
           <select id="puesto" name="puesto">
             <option value="">Selecciona tu puesto</option>
-            <option value="empleado">Empleado</option>
-            <option value="gerente">Gerente</option>
-            <option value="supervisor">Supervisor</option>
-            <option value="director">Director</option>
+            <option value="Empleado">Empleado</option>
+            <option value="Gerente">Gerente</option>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Director">Director</option>
           </select>
         </div>
         <div class="campo">
@@ -70,53 +71,13 @@
     </div>
   </div>
 
-  <script>
-    function updateClock() {
-      const now = new Date();
-      const options = { timeZone: 'America/Tijuana', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
-      const formatter = new Intl.DateTimeFormat('es-ES', options);
-      document.getElementById('clock').textContent = formatter.format(now);
-    }
-
-    setInterval(updateClock, 1000);
-    updateClock();
-
-    function guardarYRedirigir() {
-      const campos = ['nombre', 'edad', 'puesto', 'sangre', 'curp', 'postal'];
-      let datos = {};
-
-      campos.forEach(id => {
-        const valor = document.getElementById(id).value;
-        if (valor) {
-          datos[id] = valor;
-          localStorage.setItem(id, valor);
-        }
-      });
-
-      console.log("Datos guardados:", datos);
-
-      // Obtener fecha y hora actual
-      const fechaActual = new Date().toLocaleDateString('es-ES');
-      const horaActual = new Date().toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
-
-      // Redirigir al recibo con los datos en la URL
-      const url = `tikey.html?nombre=${encodeURIComponent(datos.nombre)}&edad=${encodeURIComponent(datos.edad)}&puesto=${encodeURIComponent(datos.puesto)}&sangre=${encodeURIComponent(datos.sangre)}&curp=${encodeURIComponent(datos.curp)}&postal=${encodeURIComponent(datos.postal)}&fecha=${encodeURIComponent(fechaActual)}&hora=${encodeURIComponent(horaActual)}`;
-      window.location.href = url;
-    }
-
-    window.onload = function() {
-      ['nombre', 'edad', 'puesto', 'sangre', 'curp', 'postal'].forEach(id => {
-        const valor = localStorage.getItem(id);
-        if (valor) document.getElementById(id).value = valor;
-      });
-    };
-  </script>
+   <script src="form.js"></script>
   <header>
     <nav>
       <a href="index.html">Inicio</a>
-      <a href="sorteo.html">¿De que trata?</a>
-      <a href= "REGALOS.html">Regalos</a>
-      <a href= "probabilidad.html">Tu oportunidad de ganar</a>
+      <a href="sorteo.html">¿De qué trata?</a>
+      <a href="REGALOS.html">Regalos</a>
+      <a href="probabilidad.html">Tu oportunidad de ganar</a>
       <a href="ruleta.html">Casino</a>
       <a href="bolsa.html">Inversiones</a>
     </nav>
